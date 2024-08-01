@@ -13,7 +13,10 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h
+    databaseManager.h \
+    mainwindow.h \
+    protocolParser.h \
+    udpSender.h
 
 FORMS += \
     mainwindow.ui
