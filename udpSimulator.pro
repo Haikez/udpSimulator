@@ -1,4 +1,4 @@
-QT       += xml sql core gui
+QT       += core xml sql gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +13,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    databaseManager.h \
     mainwindow.h \
+    databaseManager.h \
     protocolParser.h \
     udpSender.h
 
@@ -23,7 +23,6 @@ FORMS += \
 
 TRANSLATIONS +=
 CONFIG += lrelease
-CONFIG += embed_translations
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

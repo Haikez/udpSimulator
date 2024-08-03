@@ -11,45 +11,34 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>udpSimulator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
-     <widget class="QTextBrowser" name="logTex"/>
-    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item row="1" column="3">
-        <widget class="QLabel" name="remotePortLb">
+        <widget class="QLabel" name="destPortLb">
          <property name="text">
           <string>目的端口：</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="remoteIPLE"/>
-       </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="originPortLb">
-         <property name="text">
-          <string>源端口：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="originIPLb">
-         <property name="text">
-          <string>源IP：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="originIPLE"/>
-       </item>
        <item row="0" column="4">
-        <widget class="QLineEdit" name="originPortLE">
+        <widget class="QLineEdit" name="sourcePortLE">
          <property name="maximumSize">
           <size>
            <width>100</width>
@@ -61,8 +50,35 @@
          </property>
         </widget>
        </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="sourceIPLE"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="sourceIPLb">
+         <property name="text">
+          <string>源IP：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="destIPLE"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="sourcePortLb">
+         <property name="text">
+          <string>源端口：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="destIPLb">
+         <property name="text">
+          <string>目的IP：</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="4">
-        <widget class="QLineEdit" name="remotePortLE">
+        <widget class="QLineEdit" name="destPortLE">
          <property name="maximumSize">
           <size>
            <width>100</width>
@@ -71,17 +87,48 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="remoteIPLb">
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="FilePathLb">
          <property name="text">
-          <string>目的IP：</string>
+          <string>文件路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="FilePathLE"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="selectXMLBtn">
+         <property name="text">
+          <string>选择XML</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item row="2" column="0">
+     <widget class="QTextEdit" name="logText"/>
+    </item>
+    <item row="2" column="1">
      <widget class="QWidget" name="widget_3" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -90,49 +137,6 @@
        </sizepolicy>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="numLE">
-         <property name="maximumSize">
-          <size>
-           <width>100</width>
-           <height>16777215</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="freqLE">
-         <property name="maximumSize">
-          <size>
-           <width>100</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>单位: ms</string>
-         </property>
-         <property name="clearButtonEnabled">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="freqLb">
-         <property name="text">
-          <string>频率：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="numLb">
-         <property name="text">
-          <string>数目：</string>
-         </property>
-        </widget>
-       </item>
        <item row="5" column="0" colspan="2">
         <widget class="QWidget" name="widget_2" native="true">
          <layout class="QGridLayout" name="gridLayout_4">
@@ -176,6 +180,49 @@
            </spacer>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="freqLE">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>单位: ms</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="numLE">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="freqLb">
+         <property name="text">
+          <string>频率：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="numLb">
+         <property name="text">
+          <string>数目：</string>
+         </property>
         </widget>
        </item>
       </layout>
