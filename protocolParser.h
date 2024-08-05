@@ -88,7 +88,7 @@ public:
                 field.data = QVariant::fromValue(binaryData);
             } else if (field.datatype == "OCT") {
                 // 八进制数据解析
-                // 需手动转换八进制字符串
+                field.data = fieldElement.elementsByTagName("data").at(0).toElement().text().toUInt(nullptr, 8);
             } else if (field.datatype == "HEX") {
                 field.data = fieldElement.elementsByTagName("data").at(0).toElement().text().toUInt(nullptr, 16);
             } else if (field.datatype == "FLT") {
